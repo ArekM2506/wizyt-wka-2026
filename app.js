@@ -6,7 +6,14 @@ const artwork=$('artwork');
 function missingArtwork(){artwork.hidden=true;$('artwork-missing').hidden=false;document.querySelectorAll('.artwork-qr,.artwork-save').forEach(element=>{element.hidden=true;});}
 artwork.addEventListener('error',missingArtwork);
 if(artwork.complete&&artwork.naturalWidth===0)missingArtwork();
-$('qr-toggle').addEventListener('click',()=>{const open=$('qr-panel').hidden;$('qr-panel').hidden=!open;$('qr-toggle').setAttribute('aria-expanded',String(open));});
+$('qr-toggle').addEventListener('click',event=>{
+  event.preventDefault();
+  const panel=$('qr-panel');
+  const open=panel.hidden;
+  panel.hidden=!open;
+  $('qr-toggle').setAttribute('aria-expanded',String(open));
+  if(open){panel.scrollIntoView({block:'start',behavior:'auto'});panel.focus({preventScroll:true});}
+});
 function showCopy(){ $('copy-panel').hidden=false;$('share-url').value=CARD_URL;$('share-url').focus();$('share-url').select(); }
 async function copyLink(){
   try{if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(CARD_URL);say('Link skopiowany / Link copied.');}

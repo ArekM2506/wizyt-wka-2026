@@ -11,8 +11,8 @@
   <link rel="manifest" href="./manifest.webmanifest">
   <link rel="apple-touch-icon" href="./assets/icon-180.png">
   <link rel="icon" type="image/png" href="./assets/icon-192.png">
-  <link rel="stylesheet" href="./style.css">
-  <script src="./app.js" defer></script>
+  <link rel="stylesheet" href="./style.css?v=20261105-2">
+  <script src="./app.js?v=20261105-2" defer></script>
 </head>
 <body>
 <main>
@@ -25,11 +25,18 @@
   </section>
   <p class="qr-note">QR otwiera stronę wizytówki. Kontakt pobierzesz przyciskiem „Zapisz kontakt”. <span lang="en">The QR opens this page. Use “Save contact” to download the contact.</span></p>
   <nav aria-label="Funkcje wizytówki / Business card actions">
-    <button id="qr-toggle" aria-expanded="false" aria-controls="qr-panel">Pokaż mój kod QR <small lang="en">Show my QR code</small></button>
+    <a class="button" id="qr-toggle" href="./assets/qr.png" aria-expanded="false" aria-controls="qr-panel">Pokaż mój kod QR <small lang="en">Show my QR code</small></a>
     <button id="share">Udostępnij wizytówkę <small lang="en">Share business card</small></button>
     <a class="button" href="./arkadiusz-mordak.vcf" download="Arkadiusz-Mordak.vcf">Zapisz kontakt <small lang="en">Save contact</small></a>
   </nav>
   <p role="status" aria-live="polite" id="status"></p>
+  <section id="qr-panel" class="panel" hidden tabindex="-1" aria-labelledby="qr-heading">
+    <h2 id="qr-heading">Zeskanuj kod <span lang="en">/ Scan the code</span></h2>
+    <img class="qr" src="./assets/qr.png" alt="Kod QR prowadzący do https://arekm2506.github.io/wizyt-wka-2026/" width="492" height="492">
+    <a class="url" href="https://arekm2506.github.io/wizyt-wka-2026/">arekm2506.github.io/wizyt-wka-2026/</a>
+    <p>Zeskanuj kod aparatem drugiego telefonu, aby otworzyć wizytówkę.<br><span lang="en">Scan with another phone’s camera to open the business card.</span></p>
+    <a href="./assets/qr.png" download="Arkadiusz-Mordak-QR.png">Pobierz kod QR <span lang="en">/ Download QR code</span></a>
+  </section>
   <section class="contact panel" aria-labelledby="contact-heading">
     <h2 id="contact-heading">Kontakt <span lang="en">/ Contact</span></h2>
     <p><strong>Dr inż. Arkadiusz Mordak <span lang="en">/ Arkadiusz Mordak, PhD, Eng.</span></strong><br>Prodziekan ds. organizacyjnych<br><span lang="en">Vice-dean for organizational affairs</span></p>
@@ -39,13 +46,6 @@
       <a href="tel:+48607298941">+48 607 298 941</a><br>
       <a href="mailto:a.mordak@po.edu.pl">a.mordak@po.edu.pl</a>
     </address>
-  </section>
-  <section id="qr-panel" class="panel" hidden aria-labelledby="qr-heading">
-    <h2 id="qr-heading">Zeskanuj kod <span lang="en">/ Scan the code</span></h2>
-    <img class="qr" src="./assets/qr.png" alt="Kod QR prowadzący do https://arekm2506.github.io/wizyt-wka-2026/" width="492" height="492">
-    <a class="url" href="https://arekm2506.github.io/wizyt-wka-2026/">arekm2506.github.io/wizyt-wka-2026/</a>
-    <p>Kod otworzy wizytówkę po opublikowaniu strony.<br><span lang="en">The code will open the card once the website is published.</span></p>
-    <a href="./assets/qr.png" download="Arkadiusz-Mordak-QR.png">Pobierz kod QR <span lang="en">/ Download QR code</span></a>
   </section>
   <section id="copy-panel" class="panel" hidden aria-labelledby="copy-heading">
     <h2 id="copy-heading">Link do wizytówki <span lang="en">/ Business card link</span></h2>

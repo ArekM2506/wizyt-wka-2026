@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arkadiusz Mordak — wizytówka / business card</title>
+  <meta name="description" content="Wizytówka Arkadiusza Mordaka / Arkadiusz Mordak’s business card">
+  <meta name="theme-color" content="#102846">
+  <meta name="apple-mobile-web-app-title" content="Moja wizytówka">
+  <link rel="canonical" href="https://arekm2506.github.io/wizyt-wka-2026/">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./assets/icon-180.png">
+  <link rel="icon" type="image/png" href="./assets/icon-192.png">
+  <link rel="stylesheet" href="./style.css">
+  <script src="./app.js" defer></script>
+</head>
+<body>
+<main>
+  <header><p class="eyebrow">WIZYTÓWKA <span lang="en">/ BUSINESS CARD</span></p><h1>Arkadiusz Mordak</h1></header>
+  <section aria-label="Wizytówka / Business card" class="card">
+    <img id="artwork" src="./assets/wizytowka.png" width="1536" height="1024" alt="Zatwierdzona biało-granatowa dwujęzyczna wizytówka z rysunkiem budynku w prawym górnym rogu. Dane kontaktowe znajdują się również poniżej.">
+    <a class="artwork-qr" href="https://arekm2506.github.io/wizyt-wka-2026/" aria-label="Otwórz wizytówkę / Open business card"><img src="./assets/qr.png" alt="Prawdziwy kod QR do strony wizytówki" width="492" height="492"></a>
+    <a class="artwork-save" href="./arkadiusz-mordak.vcf" download="Arkadiusz-Mordak.vcf" aria-label="Zapisz kontakt / Save contact"></a>
+    <p id="artwork-missing" hidden>Nie udało się wczytać grafiki. Dane kontaktowe znajdziesz poniżej.<br><span lang="en">The artwork could not be loaded. Contact details are listed below.</span></p>
+  </section>
+  <p class="qr-note">QR otwiera stronę wizytówki. Kontakt pobierzesz przyciskiem „Zapisz kontakt”. <span lang="en">The QR opens this page. Use “Save contact” to download the contact.</span></p>
+  <nav aria-label="Funkcje wizytówki / Business card actions">
+    <button id="qr-toggle" aria-expanded="false" aria-controls="qr-panel">Pokaż mój kod QR <small lang="en">Show my QR code</small></button>
+    <button id="share">Udostępnij wizytówkę <small lang="en">Share business card</small></button>
+    <a class="button" href="./arkadiusz-mordak.vcf" download="Arkadiusz-Mordak.vcf">Zapisz kontakt <small lang="en">Save contact</small></a>
+  </nav>
+  <p role="status" aria-live="polite" id="status"></p>
+  <section class="contact panel" aria-labelledby="contact-heading">
+    <h2 id="contact-heading">Kontakt <span lang="en">/ Contact</span></h2>
+    <p><strong>Dr inż. Arkadiusz Mordak <span lang="en">/ Arkadiusz Mordak, PhD, Eng.</span></strong><br>Prodziekan ds. organizacyjnych<br><span lang="en">Vice-dean for organizational affairs</span></p>
+    <p>Katedra Inżynierii Materiałów Budowlanych<br><span lang="en">Department of Building Materials Engineering</span><br>Wydział Budownictwa i Architektury, Politechnika Opolska<br><span lang="en">Faculty of Civil Engineering and Architecture, Opole University of Technology</span></p>
+    <address>ul. Katowicka 48, 45-061 Opole, Polska / Poland<br>
+      <a href="tel:+48774498593">+48 77 449 85 93</a> · <a href="tel:+48774498560">+48 77 449 85 60</a><br>
+      <a href="tel:+48607298941">+48 607 298 941</a><br>
+      <a href="mailto:a.mordak@po.edu.pl">a.mordak@po.edu.pl</a>
+    </address>
+  </section>
+  <section id="qr-panel" class="panel" hidden aria-labelledby="qr-heading">
+    <h2 id="qr-heading">Zeskanuj kod <span lang="en">/ Scan the code</span></h2>
+    <img class="qr" src="./assets/qr.png" alt="Kod QR prowadzący do https://arekm2506.github.io/wizyt-wka-2026/" width="492" height="492">
+    <a class="url" href="https://arekm2506.github.io/wizyt-wka-2026/">arekm2506.github.io/wizyt-wka-2026/</a>
+    <p>Kod otworzy wizytówkę po opublikowaniu strony.<br><span lang="en">The code will open the card once the website is published.</span></p>
+    <a href="./assets/qr.png" download="Arkadiusz-Mordak-QR.png">Pobierz kod QR <span lang="en">/ Download QR code</span></a>
+  </section>
+  <section id="copy-panel" class="panel" hidden aria-labelledby="copy-heading">
+    <h2 id="copy-heading">Link do wizytówki <span lang="en">/ Business card link</span></h2>
+    <label for="share-url">Skopiuj link <span lang="en">/ Copy link</span></label>
+    <input id="share-url" readonly value="https://arekm2506.github.io/wizyt-wka-2026/" type="url">
+    <button id="copy">Kopiuj link <span lang="en">/ Copy link</span></button>
+  </section>
+  <details>
+    <summary>Dodaj na ekran telefonu <span lang="en">/ Add to Home Screen</span></summary>
+    <p><strong>Android (Chrome):</strong> otwórz opublikowaną stronę, wybierz menu ⋮ → „Dodaj do ekranu głównego” (czasem „Zainstaluj aplikację”) → „Dodaj”.</p>
+    <p><strong>iPhone (Safari):</strong> otwórz opublikowaną stronę, wybierz „Udostępnij” → „Do ekranu początkowego” → „Dodaj”. Nazwij skrót „Moja wizytówka”.</p>
+    <p lang="en"><strong>Android:</strong> Chrome menu → Add to Home screen. <strong>iPhone:</strong> Safari → Share → Add to Home Screen. Menu names may vary.</p>
+    <p>Skrót otwiera stronę i wymaga internetu. <span lang="en">Internet connection required.</span></p>
+    <button id="install" hidden>Dodaj wizytówkę <span lang="en">/ Install</span></button>
+  </details>
+  <noscript><p>Udostępnij stronę przez menu przeglądarki. <span lang="en">Use your browser’s Share menu.</span></p><img class="qr" src="./assets/qr.png" alt="QR do wizytówki / QR to business card"></noscript>
+</main>
+</body>
+</html>

@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Mordak;Arkadiusz;;;
+FN:Dr inż. Arkadiusz Mordak
+ORG:Politechnika Opolska;Wydział Budownictwa i Architektury;Katedra Inżyn
+ ierii Materiałów Budowlanych
+TITLE:Prodziekan ds. organizacyjnych / Vice-dean for organizational affairs
+TEL;TYPE=WORK,VOICE:+48774498593
+TEL;TYPE=WORK,VOICE:+48774498560
+TEL;TYPE=CELL,VOICE:+48607298941
+EMAIL;TYPE=INTERNET,WORK:a.mordak@po.edu.pl
+ADR;TYPE=WORK:;;ul. Katowicka 48;Opole;;45-061;Polska
+URL:https://arekm2506.github.io/wizyt-wka-2026/
+END:VCARD
